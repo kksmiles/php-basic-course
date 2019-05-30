@@ -1,5 +1,5 @@
 <?php
-    include('config/connect.php');
+    include('connect.php');
     session_start();
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -7,7 +7,9 @@
 
     if($password == $cpassword)
     {
-        $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+        $query = "INSERT INTO users
+        (username, password) VALUES
+        ('$username', '$password')";
         mysqli_query($conn,$query);
         echo "<script> alert('Account successfully created!') </script>";
         echo "<script> location='loginform.php' </script>";

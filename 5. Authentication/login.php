@@ -19,8 +19,6 @@
       $_SESSION['userID']=$arr[0];
       $_SESSION['username']=$arr[1];
       $_SESSION['auth']=1;
-
-
       echo "<script>alert('Logged in successfully')</script>";
       echo "<script>location='index.php'</script>";
     }
